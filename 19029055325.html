@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="../images/favicon.png" type="image/png">
+            <title>tSMS - Receive SMS Online</title>
+            
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="../css/vendor.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <script src="../vendor/Shortcode/Shortcode.js"></script>
+    <script src="../js/app.js" defer></script>
+    <style >[wire\:loading], [wire\:loading\.delay], [wire\:loading\.inline-block], [wire\:loading\.inline], [wire\:loading\.block], [wire\:loading\.flex], [wire\:loading\.table], [wire\:loading\.grid], [wire\:loading\.inline-flex] {display: none;}[wire\:loading\.delay\.shortest], [wire\:loading\.delay\.shorter], [wire\:loading\.delay\.short], [wire\:loading\.delay\.long], [wire\:loading\.delay\.longer], [wire\:loading\.delay\.longest] {display:none;}[wire\:offline] {display: none;}[wire\:dirty]:not(textarea):not(input):not(select) {display: none;}input:-webkit-autofill, select:-webkit-autofill, textarea:-webkit-autofill {animation-duration: 50000s;animation-name: livewireautofill;}@keyframes livewireautofill { from {} }</style>
+    
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --head-font: "Poppins";
+  --body-font: "Poppins";
+}
+.bg-primary {
+  background-color: #233d4d;
+}
+.text-primary {
+  color: #233d4d;
+}
+.border-primary {
+  border-color: #233d4d;
+}
+.bg-secondary {
+  background-color: #c1dc78;
+}
+.text-secondary {
+  color: #c1dc78;
+}
+.border-secondary {
+  border-color: #c1dc78;
+}
+.bg-tertiary {
+  background-color: #d2ab3e;
+}
+.text-tertiary {
+  color: #d2ab3e;
+}
+.border-tertiary {
+  border-color: #d2ab3e;
+}
+input:checked~.toggle-path {
+  background-color: #233d4d;
+}
+</style></head>
+<body>
+    <div class="default-theme">
+        <div class="container mx-auto px-5 md:px-0">
+            <div class="flex justify-end text-white">
+                                <a class="text-xs md:text-base flex gap-3 px-3 md:px-5 py-2 md:py-3 bg-primary rounded-bl-lg" href="../register.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 md:h-5 w-4 md:w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z" />
+                    </svg>
+                    <span>Register</span>
+                </a>
+                <a class="text-xs md:text-base flex gap-3 px-3 md:px-5 py-2 md:py-3 bg-secondary rounded-br-lg" href="../order.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 md:h-5 w-4 md:w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1" />
+                    </svg>
+                    <span>Login</span>
+                </a>
+                            </div>
+            <div class="flex gap-10">
+                <div class="logo">
+                    <a href="19096864336.html">
+                        <img class="max-w-logo" src="../images/logo.png" alt="logo">
+                    </a>
+                </div>
+                <div class="flex-1">
+                    <nav wire:id="ogY4AHVgqOWoRuc3hLSA" wire:initial-data="{&quot;fingerprint&quot;:{&quot;id&quot;:&quot;ogY4AHVgqOWoRuc3hLSA&quot;,&quot;name&quot;:&quot;frontend.nav&quot;,&quot;locale&quot;:&quot;en&quot;,&quot;path&quot;:&quot;number\/19029055325&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;v&quot;:&quot;acj&quot;},&quot;effects&quot;:{&quot;listeners&quot;:[]},&quot;serverMemo&quot;:{&quot;children&quot;:[],&quot;errors&quot;:[],&quot;htmlHash&quot;:&quot;d5b33687&quot;,&quot;data&quot;:{&quot;menus&quot;:[],&quot;current_route&quot;:null},&quot;dataMeta&quot;:{&quot;modelCollections&quot;:{&quot;menus&quot;:{&quot;class&quot;:&quot;App\\Models\\Menu&quot;,&quot;id&quot;:[1,2],&quot;relations&quot;:[],&quot;connection&quot;:&quot;mysql&quot;,&quot;collectionClass&quot;:null}}},&quot;checksum&quot;:&quot;1cc0a8ee5134047c91e30735875ac7df1bd778baa46b261b03f6d6e2496816fb&quot;}}" class="h-full">
+    <div class="hidden lg:flex sticky top-0 z-40 h-24">
+        <div class="w-full">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex items-baseline space-x-4">
+                                                                                                                    <a href="19096864336.html" class="px-3 py-2 text-sm font-semibold text-left bg-transparent text-gray-700  rounded-lg md:w-auto md:inline hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none" target="_self">Home</a>
+                                                                                                                                                                                <a href="../order.html" class="px-3 py-2 text-sm font-semibold text-left bg-transparent text-gray-700  rounded-lg md:w-auto md:inline hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none" target="_self">Order</a>
+                                                                                                                                                        </div>
+                </div>
+                <div class="flex items-center">
+                    <div>
+                                            </div>
+                    <div class="ml-4 items-center md:ml-6">
+                        <div class="relative">
+                            <form action="https://tsms.thehp.in/locale" id="locale-form" method="post">
+                                <input type="hidden" name="_token" value="9ECW1DKJwib7UQvzSksPX5uerXs7fXdHTDE6oynO">                                <select class="block appearance-none bg-white border-gray-300 cursor-pointer text-gray-800 py-1 rounded-md focus:outline-none focus:border-0 focus:shadow-none" name="locale" id="locale">
+                                                                        <option value="ar" >Arabic</option>
+                                                                        <option value="de" >German</option>
+                                                                        <option value="en" selected>English</option>
+                                                                        <option value="es" >Spanish</option>
+                                                                        <option value="fr" >French</option>
+                                                                        <option value="hi" >Hindi</option>
+                                                                        <option value="id" >Indonesian</option>
+                                                                        <option value="it" >Norwegian</option>
+                                                                        <option value="no" >Italian</option>
+                                                                        <option value="pl" >Polish</option>
+                                                                        <option value="ru" >Russian</option>
+                                                                        <option value="tr" >Turkish</option>
+                                                                        <option value="vi" >Vietnamese</option>
+                                                                    </select>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="lg:hidden flex justify-end items-center h-full" x-data="{ open: false }">
+        <div @click="open = true" class="flex items-center w-8 text-black">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+            </svg>
+        </div>
+        <div x-show="open" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-75" x-transition:leave-start="transform opacity-100 scale-100" x-transition:leave-end="transform opacity-0 scale-95" @click.away="open = false" class="flex-col lg:hidden fixed top-0 left-0 min-h-screen w-full bg-black bg-opacity-75">
+            <div @click="open = false" class="absolute top-6 right-6 w-8 text-white">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </div>
+            <div class="w-full mx-auto mt-20">
+                <div class="flex flex-col items-center justify-between">
+                    <div class="flex flex-col items-center space-y-2">
+                                                                                                                    <a href="19096864336.html" class="px-3 py-2 font-semibold text-left bg-transparent text-white  rounded-lg md:w-auto md:inline focus:text-gray-900 focus:bg-gray-200 focus:outline-none" target="_self">Home</a>
+                                                                                                                                                                                <a href="../order.html" class="px-3 py-2 font-semibold text-left bg-transparent text-white  rounded-lg md:w-auto md:inline focus:text-gray-900 focus:bg-gray-200 focus:outline-none" target="_self">Order</a>
+                                                                                                                                                        </div>
+                    <div class="flex flex-col items-center space-y-2 mt-10">
+                        <div class="text-white space-x-2">
+                                                    </div>
+                        <div class="items-center mt-4">
+                            <div class="relative">
+                                <form action="https://tsms.thehp.in/locale" id="locale-form-mobile" method="post">
+                                    <input type="hidden" name="_token" value="9ECW1DKJwib7UQvzSksPX5uerXs7fXdHTDE6oynO">                                    <select class="block appearance-none bg-white border-gray-300 cursor-pointer text-gray-800 py-1 rounded-md focus:outline-none" name="locale" id="locale-mobile">
+                                                                                <option value="ar" >Arabic</option>
+                                                                                <option value="de" >German</option>
+                                                                                <option value="en" selected>English</option>
+                                                                                <option value="es" >Spanish</option>
+                                                                                <option value="fr" >French</option>
+                                                                                <option value="hi" >Hindi</option>
+                                                                                <option value="id" >Indonesian</option>
+                                                                                <option value="it" >Norwegian</option>
+                                                                                <option value="no" >Italian</option>
+                                                                                <option value="pl" >Polish</option>
+                                                                                <option value="ru" >Russian</option>
+                                                                                <option value="tr" >Turkish</option>
+                                                                                <option value="vi" >Vietnamese</option>
+                                                                            </select>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+<!-- Livewire Component wire-end:ogY4AHVgqOWoRuc3hLSA -->                </div>
+            </div>
+                                            <main wire:id="m4DpmYF8yfG5tcJC5MYv" wire:initial-data="{&quot;fingerprint&quot;:{&quot;id&quot;:&quot;m4DpmYF8yfG5tcJC5MYv&quot;,&quot;name&quot;:&quot;frontend.number&quot;,&quot;locale&quot;:&quot;en&quot;,&quot;path&quot;:&quot;number\/19029055325&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;v&quot;:&quot;acj&quot;},&quot;effects&quot;:{&quot;listeners&quot;:[&quot;setCaptcha&quot;,&quot;checkReCaptcha3&quot;],&quot;path&quot;:&quot;https:\/\/tsms.thehp.in\/number\/19029055325&quot;},&quot;serverMemo&quot;:{&quot;children&quot;:[],&quot;errors&quot;:[],&quot;htmlHash&quot;:&quot;b34c02db&quot;,&quot;data&quot;:{&quot;number&quot;:[],&quot;is_admin&quot;:false,&quot;auto_renew&quot;:null,&quot;captchaError&quot;:null,&quot;captcha&quot;:null,&quot;timestamp&quot;:1717468252,&quot;page&quot;:1,&quot;paginators&quot;:{&quot;page&quot;:1}},&quot;dataMeta&quot;:{&quot;models&quot;:{&quot;number&quot;:{&quot;class&quot;:&quot;App\\Models\\Number&quot;,&quot;id&quot;:1,&quot;relations&quot;:[],&quot;connection&quot;:&quot;mysql&quot;,&quot;collectionClass&quot;:null}}},&quot;checksum&quot;:&quot;061784e16adea9c8affc04bf7e8609ca1d710b6c9efca9ff6dd9cec2593bb0af&quot;}}" class="my-10">
+    <div class="number space-y-6">
+        <div class="flex flex-col md:flex-row justify-between items-start">
+            <div class="space-y-6">
+                <h1 class="text-2xl font-bold text-primary">Messages for +19029055325</h1>
+                <div class="border-b border-dashed border-primary w-24"></div>
+            </div>
+                    </div>
+                                    <div class="flex flex-col space-y-3">
+                                                                <div class="messages flex w-100">
+                    <div class="bg-gray-100 p-5 rounded-l-lg">
+                        <label class="text-xs">Sender</label>
+                                                <div>+185524XXXXX</div>
+                                            </div>
+                    <div class="bg-gray-200 p-5 flex-1">
+                        <label class="text-xs">Message</label>
+                        <div class="content">G-747424 is your Google verification code.</div>
+                        <button class="hidden mt-2 px-2 py-1 text-xs bg-gray-600 text-white rounded copy-code disabled:bg-gray-400" data-original="Copy Code" data-alt="Copied">Copy Code</button>
+                    </div>
+                    <div class="bg-gray-100 p-5 rounded-r-lg">
+                        <label class="text-xs">Time</label>
+                        <div>3 days ago</div>
+                    </div>
+                </div>
+                                                <div class="messages flex w-100">
+                    <div class="bg-gray-100 p-5 rounded-l-lg">
+                        <label class="text-xs">Sender</label>
+                                                <div>+185524XXXXX</div>
+                                            </div>
+                    <div class="bg-gray-200 p-5 flex-1">
+                        <label class="text-xs">Message</label>
+                        <div class="content">G-269369 is your Google verification code.</div>
+                        <button class="hidden mt-2 px-2 py-1 text-xs bg-gray-600 text-white rounded copy-code disabled:bg-gray-400" data-original="Copy Code" data-alt="Copied">Copy Code</button>
+                    </div>
+                    <div class="bg-gray-100 p-5 rounded-r-lg">
+                        <label class="text-xs">Time</label>
+                        <div>3 days ago</div>
+                    </div>
+                </div>
+                                                <div class="messages flex w-100">
+                    <div class="bg-gray-100 p-5 rounded-l-lg">
+                        <label class="text-xs">Sender</label>
+                                                <div>+185524XXXXX</div>
+                                            </div>
+                    <div class="bg-gray-200 p-5 flex-1">
+                        <label class="text-xs">Message</label>
+                        <div class="content">G-537290 is your Google verification code.</div>
+                        <button class="hidden mt-2 px-2 py-1 text-xs bg-gray-600 text-white rounded copy-code disabled:bg-gray-400" data-original="Copy Code" data-alt="Copied">Copy Code</button>
+                    </div>
+                    <div class="bg-gray-100 p-5 rounded-r-lg">
+                        <label class="text-xs">Time</label>
+                        <div>3 days ago</div>
+                    </div>
+                </div>
+                                                <div class="messages flex w-100">
+                    <div class="bg-gray-100 p-5 rounded-l-lg">
+                        <label class="text-xs">Sender</label>
+                                                <div>+185524XXXXX</div>
+                                            </div>
+                    <div class="bg-gray-200 p-5 flex-1">
+                        <label class="text-xs">Message</label>
+                        <div class="content">G-811320 is your Google verification code.</div>
+                        <button class="hidden mt-2 px-2 py-1 text-xs bg-gray-600 text-white rounded copy-code disabled:bg-gray-400" data-original="Copy Code" data-alt="Copied">Copy Code</button>
+                    </div>
+                    <div class="bg-gray-100 p-5 rounded-r-lg">
+                        <label class="text-xs">Time</label>
+                        <div>3 days ago</div>
+                    </div>
+                </div>
+                                                <div class="messages flex w-100">
+                    <div class="bg-gray-100 p-5 rounded-l-lg">
+                        <label class="text-xs">Sender</label>
+                                                <div>+185524XXXXX</div>
+                                            </div>
+                    <div class="bg-gray-200 p-5 flex-1">
+                        <label class="text-xs">Message</label>
+                        <div class="content">G-763452 is your Google verification code.</div>
+                        <button class="hidden mt-2 px-2 py-1 text-xs bg-gray-600 text-white rounded copy-code disabled:bg-gray-400" data-original="Copy Code" data-alt="Copied">Copy Code</button>
+                    </div>
+                    <div class="bg-gray-100 p-5 rounded-r-lg">
+                        <label class="text-xs">Time</label>
+                        <div>3 days ago</div>
+                    </div>
+                </div>
+                                                <div class="messages flex w-100">
+                    <div class="bg-gray-100 p-5 rounded-l-lg">
+                        <label class="text-xs">Sender</label>
+                                                <div>+191670XXXXX</div>
+                                            </div>
+                    <div class="bg-gray-200 p-5 flex-1">
+                        <label class="text-xs">Message</label>
+                        <div class="content">Test message: please ignore</div>
+                        <button class="hidden mt-2 px-2 py-1 text-xs bg-gray-600 text-white rounded copy-code disabled:bg-gray-400" data-original="Copy Code" data-alt="Copied">Copy Code</button>
+                    </div>
+                    <div class="bg-gray-100 p-5 rounded-r-lg">
+                        <label class="text-xs">Time</label>
+                        <div>6 days ago</div>
+                    </div>
+                </div>
+                                                <div class="messages flex w-100">
+                    <div class="bg-gray-100 p-5 rounded-l-lg">
+                        <label class="text-xs">Sender</label>
+                                                <div>+145060XXXXX</div>
+                                            </div>
+                    <div class="bg-gray-200 p-5 flex-1">
+                        <label class="text-xs">Message</label>
+                        <div class="content">Your DoorDash verification code is 873284. Do not share this with anyone. We will never contact you to request this code.</div>
+                        <button class="hidden mt-2 px-2 py-1 text-xs bg-gray-600 text-white rounded copy-code disabled:bg-gray-400" data-original="Copy Code" data-alt="Copied">Copy Code</button>
+                    </div>
+                    <div class="bg-gray-100 p-5 rounded-r-lg">
+                        <label class="text-xs">Time</label>
+                        <div>1 week ago</div>
+                    </div>
+                </div>
+                                                <div class="messages flex w-100">
+                    <div class="bg-gray-100 p-5 rounded-l-lg">
+                        <label class="text-xs">Sender</label>
+                                                <div>+145060XXXXX</div>
+                                            </div>
+                    <div class="bg-gray-200 p-5 flex-1">
+                        <label class="text-xs">Message</label>
+                        <div class="content">Your DoorDash verification code is 892443. Do not share this with anyone. We will never contact you to request this code. As an alternative, use this link to automatically sign into your account https://drd.sh/bmS4h2TqXzPr4cJo.</div>
+                        <button class="hidden mt-2 px-2 py-1 text-xs bg-gray-600 text-white rounded copy-code disabled:bg-gray-400" data-original="Copy Code" data-alt="Copied">Copy Code</button>
+                    </div>
+                    <div class="bg-gray-100 p-5 rounded-r-lg">
+                        <label class="text-xs">Time</label>
+                        <div>1 week ago</div>
+                    </div>
+                </div>
+                                                <div class="messages flex w-100">
+                    <div class="bg-gray-100 p-5 rounded-l-lg">
+                        <label class="text-xs">Sender</label>
+                                                <div>+145060XXXXX</div>
+                                            </div>
+                    <div class="bg-gray-200 p-5 flex-1">
+                        <label class="text-xs">Message</label>
+                        <div class="content">Your DoorDash verification code is 127530. Do not share this with anyone. We will never contact you to request this code.</div>
+                        <button class="hidden mt-2 px-2 py-1 text-xs bg-gray-600 text-white rounded copy-code disabled:bg-gray-400" data-original="Copy Code" data-alt="Copied">Copy Code</button>
+                    </div>
+                    <div class="bg-gray-100 p-5 rounded-r-lg">
+                        <label class="text-xs">Time</label>
+                        <div>1 week ago</div>
+                    </div>
+                </div>
+                                                <div class="messages flex w-100">
+                    <div class="bg-gray-100 p-5 rounded-l-lg">
+                        <label class="text-xs">Sender</label>
+                                                <div>+185524XXXXX</div>
+                                            </div>
+                    <div class="bg-gray-200 p-5 flex-1">
+                        <label class="text-xs">Message</label>
+                        <div class="content">G-800096 is your Google verification code.</div>
+                        <button class="hidden mt-2 px-2 py-1 text-xs bg-gray-600 text-white rounded copy-code disabled:bg-gray-400" data-original="Copy Code" data-alt="Copied">Copy Code</button>
+                    </div>
+                    <div class="bg-gray-100 p-5 rounded-r-lg">
+                        <label class="text-xs">Time</label>
+                        <div>2 weeks ago</div>
+                    </div>
+                </div>
+                                                <div class="messages flex w-100">
+                    <div class="bg-gray-100 p-5 rounded-l-lg">
+                        <label class="text-xs">Sender</label>
+                                                <div>+158780XXXXX</div>
+                                            </div>
+                    <div class="bg-gray-200 p-5 flex-1">
+                        <label class="text-xs">Message</label>
+                        <div class="content">&lt;#&gt; كود واتساب للأعمال الخاص بك ‎901-778
+لا تشاركه مع أحد
+rJbA/XP1K+V</div>
+                        <button class="hidden mt-2 px-2 py-1 text-xs bg-gray-600 text-white rounded copy-code disabled:bg-gray-400" data-original="Copy Code" data-alt="Copied">Copy Code</button>
+                    </div>
+                    <div class="bg-gray-100 p-5 rounded-r-lg">
+                        <label class="text-xs">Time</label>
+                        <div>2 weeks ago</div>
+                    </div>
+                </div>
+                                                <div class="messages flex w-100">
+                    <div class="bg-gray-100 p-5 rounded-l-lg">
+                        <label class="text-xs">Sender</label>
+                                                <div>+158780XXXXX</div>
+                                            </div>
+                    <div class="bg-gray-200 p-5 flex-1">
+                        <label class="text-xs">Message</label>
+                        <div class="content">&lt;#&gt; كود واتساب للأعمال الخاص بك ‎901-778
+لا تشاركه مع أحد
+rJbA/XP1K+V</div>
+                        <button class="hidden mt-2 px-2 py-1 text-xs bg-gray-600 text-white rounded copy-code disabled:bg-gray-400" data-original="Copy Code" data-alt="Copied">Copy Code</button>
+                    </div>
+                    <div class="bg-gray-100 p-5 rounded-r-lg">
+                        <label class="text-xs">Time</label>
+                        <div>2 weeks ago</div>
+                    </div>
+                </div>
+                                                <div class="messages flex w-100">
+                    <div class="bg-gray-100 p-5 rounded-l-lg">
+                        <label class="text-xs">Sender</label>
+                                                <div>+158780XXXXX</div>
+                                            </div>
+                    <div class="bg-gray-200 p-5 flex-1">
+                        <label class="text-xs">Message</label>
+                        <div class="content">&lt;#&gt; كود واتساب للأعمال الخاص بك ‎901-778
+لا تشاركه مع أحد
+rJbA/XP1K+V</div>
+                        <button class="hidden mt-2 px-2 py-1 text-xs bg-gray-600 text-white rounded copy-code disabled:bg-gray-400" data-original="Copy Code" data-alt="Copied">Copy Code</button>
+                    </div>
+                    <div class="bg-gray-100 p-5 rounded-r-lg">
+                        <label class="text-xs">Time</label>
+                        <div>2 weeks ago</div>
+                    </div>
+                </div>
+                                                <div class="messages flex w-100">
+                    <div class="bg-gray-100 p-5 rounded-l-lg">
+                        <label class="text-xs">Sender</label>
+                                                <div>+158780XXXXX</div>
+                                            </div>
+                    <div class="bg-gray-200 p-5 flex-1">
+                        <label class="text-xs">Message</label>
+                        <div class="content">&lt;#&gt; كود واتساب للأعمال الخاص بك ‎901-778
+لا تشاركه مع أحد
+rJbA/XP1K+V</div>
+                        <button class="hidden mt-2 px-2 py-1 text-xs bg-gray-600 text-white rounded copy-code disabled:bg-gray-400" data-original="Copy Code" data-alt="Copied">Copy Code</button>
+                    </div>
+                    <div class="bg-gray-100 p-5 rounded-r-lg">
+                        <label class="text-xs">Time</label>
+                        <div>2 weeks ago</div>
+                    </div>
+                </div>
+                                                <div class="messages flex w-100">
+                    <div class="bg-gray-100 p-5 rounded-l-lg">
+                        <label class="text-xs">Sender</label>
+                                                <div>+158780XXXXX</div>
+                                            </div>
+                    <div class="bg-gray-200 p-5 flex-1">
+                        <label class="text-xs">Message</label>
+                        <div class="content">&lt;#&gt; كود واتساب للأعمال الخاص بك ‎241-091
+لا تشاركه مع أحد
+rJbA/XP1K+V</div>
+                        <button class="hidden mt-2 px-2 py-1 text-xs bg-gray-600 text-white rounded copy-code disabled:bg-gray-400" data-original="Copy Code" data-alt="Copied">Copy Code</button>
+                    </div>
+                    <div class="bg-gray-100 p-5 rounded-r-lg">
+                        <label class="text-xs">Time</label>
+                        <div>2 weeks ago</div>
+                    </div>
+                </div>
+                                <div>
+            
+        <nav role="navigation" aria-label="Pagination Navigation" class="flex items-center justify-between">
+            <div class="flex justify-between flex-1 sm:hidden">
+                <span>
+                                            <span class="relative inline-flex items-center px-4 py-2 text-sm font-medium text-gray-500 bg-white border border-gray-300 cursor-default leading-5 rounded-md select-none">
+                            &laquo; Previous
+                        </span>
+                                    </span>
+
+                <span>
+                                            <button type="button" wire:click="nextPage('page')" wire:loading.attr="disabled" dusk="nextPage.before" class="relative inline-flex items-center px-4 py-2 ml-3 text-sm font-medium text-gray-700 bg-white border border-gray-300 leading-5 rounded-md hover:text-gray-500 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 active:bg-gray-100 active:text-gray-700 transition ease-in-out duration-150">
+                            Next &raquo;
+                        </button>
+                                    </span>
+            </div>
+
+            <div class="hidden sm:flex-1 sm:flex sm:items-center sm:justify-between">
+                <div>
+                    <p class="text-sm text-gray-700 leading-5">
+                        <span>Showing</span>
+                        <span class="font-medium">1</span>
+                        <span>to</span>
+                        <span class="font-medium">15</span>
+                        <span>of</span>
+                        <span class="font-medium">1138</span>
+                        <span>results</span>
+                    </p>
+                </div>
+
+                <div>
+                    <span class="relative z-0 inline-flex rounded-md shadow-sm">
+                        <span>
+                            
+                                                            <span aria-disabled="true" aria-label="&amp;laquo; Previous">
+                                    <span class="relative inline-flex items-center px-2 py-2 text-sm font-medium text-gray-500 bg-white border border-gray-300 cursor-default rounded-l-md leading-5" aria-hidden="true">
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                        </svg>
+                                    </span>
+                                </span>
+                                                    </span>
+
+                        
+                                                    
+                            
+                            
+                                                                                                <span wire:key="paginator-page-1-page1">
+                                                                                    <span aria-current="page">
+                                                <span class="relative inline-flex items-center px-4 py-2 -ml-px text-sm font-medium text-gray-500 bg-white border border-gray-300 cursor-default leading-5 select-none">1</span>
+                                            </span>
+                                                                            </span>
+                                                                    <span wire:key="paginator-page-1-page2">
+                                                                                    <button type="button" wire:click="gotoPage(2, 'page')" class="relative inline-flex items-center px-4 py-2 -ml-px text-sm font-medium text-gray-700 bg-white border border-gray-300 leading-5 hover:text-gray-500 focus:z-10 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:bg-gray-100 active:text-gray-700 transition ease-in-out duration-150" aria-label="Go to page 2">
+                                                2
+                                            </button>
+                                                                            </span>
+                                                                    <span wire:key="paginator-page-1-page3">
+                                                                                    <button type="button" wire:click="gotoPage(3, 'page')" class="relative inline-flex items-center px-4 py-2 -ml-px text-sm font-medium text-gray-700 bg-white border border-gray-300 leading-5 hover:text-gray-500 focus:z-10 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:bg-gray-100 active:text-gray-700 transition ease-in-out duration-150" aria-label="Go to page 3">
+                                                3
+                                            </button>
+                                                                            </span>
+                                                                    <span wire:key="paginator-page-1-page4">
+                                                                                    <button type="button" wire:click="gotoPage(4, 'page')" class="relative inline-flex items-center px-4 py-2 -ml-px text-sm font-medium text-gray-700 bg-white border border-gray-300 leading-5 hover:text-gray-500 focus:z-10 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:bg-gray-100 active:text-gray-700 transition ease-in-out duration-150" aria-label="Go to page 4">
+                                                4
+                                            </button>
+                                                                            </span>
+                                                                    <span wire:key="paginator-page-1-page5">
+                                                                                    <button type="button" wire:click="gotoPage(5, 'page')" class="relative inline-flex items-center px-4 py-2 -ml-px text-sm font-medium text-gray-700 bg-white border border-gray-300 leading-5 hover:text-gray-500 focus:z-10 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:bg-gray-100 active:text-gray-700 transition ease-in-out duration-150" aria-label="Go to page 5">
+                                                5
+                                            </button>
+                                                                            </span>
+                                                                    <span wire:key="paginator-page-1-page6">
+                                                                                    <button type="button" wire:click="gotoPage(6, 'page')" class="relative inline-flex items-center px-4 py-2 -ml-px text-sm font-medium text-gray-700 bg-white border border-gray-300 leading-5 hover:text-gray-500 focus:z-10 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:bg-gray-100 active:text-gray-700 transition ease-in-out duration-150" aria-label="Go to page 6">
+                                                6
+                                            </button>
+                                                                            </span>
+                                                                    <span wire:key="paginator-page-1-page7">
+                                                                                    <button type="button" wire:click="gotoPage(7, 'page')" class="relative inline-flex items-center px-4 py-2 -ml-px text-sm font-medium text-gray-700 bg-white border border-gray-300 leading-5 hover:text-gray-500 focus:z-10 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:bg-gray-100 active:text-gray-700 transition ease-in-out duration-150" aria-label="Go to page 7">
+                                                7
+                                            </button>
+                                                                            </span>
+                                                                    <span wire:key="paginator-page-1-page8">
+                                                                                    <button type="button" wire:click="gotoPage(8, 'page')" class="relative inline-flex items-center px-4 py-2 -ml-px text-sm font-medium text-gray-700 bg-white border border-gray-300 leading-5 hover:text-gray-500 focus:z-10 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:bg-gray-100 active:text-gray-700 transition ease-in-out duration-150" aria-label="Go to page 8">
+                                                8
+                                            </button>
+                                                                            </span>
+                                                                    <span wire:key="paginator-page-1-page9">
+                                                                                    <button type="button" wire:click="gotoPage(9, 'page')" class="relative inline-flex items-center px-4 py-2 -ml-px text-sm font-medium text-gray-700 bg-white border border-gray-300 leading-5 hover:text-gray-500 focus:z-10 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:bg-gray-100 active:text-gray-700 transition ease-in-out duration-150" aria-label="Go to page 9">
+                                                9
+                                            </button>
+                                                                            </span>
+                                                                    <span wire:key="paginator-page-1-page10">
+                                                                                    <button type="button" wire:click="gotoPage(10, 'page')" class="relative inline-flex items-center px-4 py-2 -ml-px text-sm font-medium text-gray-700 bg-white border border-gray-300 leading-5 hover:text-gray-500 focus:z-10 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:bg-gray-100 active:text-gray-700 transition ease-in-out duration-150" aria-label="Go to page 10">
+                                                10
+                                            </button>
+                                                                            </span>
+                                                                                                                
+                                                            <span aria-disabled="true">
+                                    <span class="relative inline-flex items-center px-4 py-2 -ml-px text-sm font-medium text-gray-700 bg-white border border-gray-300 cursor-default leading-5 select-none">...</span>
+                                </span>
+                            
+                            
+                                                                                
+                            
+                            
+                                                                                                <span wire:key="paginator-page-1-page75">
+                                                                                    <button type="button" wire:click="gotoPage(75, 'page')" class="relative inline-flex items-center px-4 py-2 -ml-px text-sm font-medium text-gray-700 bg-white border border-gray-300 leading-5 hover:text-gray-500 focus:z-10 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:bg-gray-100 active:text-gray-700 transition ease-in-out duration-150" aria-label="Go to page 75">
+                                                75
+                                            </button>
+                                                                            </span>
+                                                                    <span wire:key="paginator-page-1-page76">
+                                                                                    <button type="button" wire:click="gotoPage(76, 'page')" class="relative inline-flex items-center px-4 py-2 -ml-px text-sm font-medium text-gray-700 bg-white border border-gray-300 leading-5 hover:text-gray-500 focus:z-10 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:bg-gray-100 active:text-gray-700 transition ease-in-out duration-150" aria-label="Go to page 76">
+                                                76
+                                            </button>
+                                                                            </span>
+                                                                                    
+                        <span>
+                            
+                                                            <button type="button" wire:click="nextPage('page')" dusk="nextPage.after" rel="next" class="relative inline-flex items-center px-2 py-2 -ml-px text-sm font-medium text-gray-500 bg-white border border-gray-300 rounded-r-md leading-5 hover:text-gray-400 focus:z-10 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:bg-gray-100 active:text-gray-500 transition ease-in-out duration-150" aria-label="Next &amp;raquo;">
+                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                                    </svg>
+                                </button>
+                                                    </span>
+                    </span>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+            </div>
+                    </div>
+        <script>
+        document.querySelectorAll('.number .messages').forEach(el => {
+            const msg = el.querySelector('.content').innerText
+            const btn = el.querySelector('.copy-code')
+            const regex = /[0-9]{4,10}/g
+            const result = regex.exec(msg)
+            if (result) {
+                btn.classList.remove('hidden')
+                btn.setAttribute('onclick', `this.disabled = true; this.innerText = this.dataset.alt; var e = this; setTimeout(function(){ e.innerText = e.dataset.original; e.disabled = false }, 2000); copyToClipboard('${result[0]}')`)
+            }
+        })
+        const copyToClipboard = (text) => {
+            let el = document.createElement('input');
+            el.type = 'text';
+            el.value = text;
+            document.body.appendChild(el);
+            var isiOSDevice = navigator.userAgent.match(/ipad|iphone/i);
+            if (isiOSDevice) {
+                var editable = el.contentEditable;
+                var readOnly = el.readOnly;
+                el.contentEditable = true;
+                el.readOnly = false;
+                var range = document.createRange();
+                range.selectNodeContents(el);
+                var selection = window.getSelection();
+                selection.removeAllRanges();
+                selection.addRange(range);
+                el.setSelectionRange(0, 999999);
+                el.contentEditable = editable;
+                el.readOnly = readOnly;
+            } else {
+                el.select();
+            }
+            document.execCommand('copy');
+            el.remove();
+        }
+    </script>
+</main>
+<!-- Livewire Component wire-end:m4DpmYF8yfG5tcJC5MYv -->            </div>
+    </div>
+    <script src="../livewire/livewire.js%3Fid=90730a3b0e7144480175" data-turbo-eval="false" data-turbolinks-eval="false" ></script><script data-turbo-eval="false" data-turbolinks-eval="false" >window.livewire = new Livewire();window.Livewire = window.livewire;window.livewire_app_url = '';window.livewire_token = '9ECW1DKJwib7UQvzSksPX5uerXs7fXdHTDE6oynO';window.deferLoadingAlpine = function (callback) {window.addEventListener('livewire:load', function () {callback();});};let started = false;window.addEventListener('alpine:initializing', function () {if (! started) {window.livewire.start();started = true;}});document.addEventListener("DOMContentLoaded", function () {if (! started) {window.livewire.start();started = true;}});</script>
+    
+    
+                    <script src="../storage/js/pustrck.js" defer></script>
+    <script defer>
+    setTimeout(() => {
+        const enable_ad_block_detector = "0"
+        if(!document.getElementById('Q8CvrZzY9fphm6gG') && enable_ad_block_detector == "1") {
+            document.querySelector('body > div').insertAdjacentHTML('beforebegin', `
+                <div class="fixed w-screen h-screen bg-red-800 flex flex-col justify-center items-center gap-5 z-50 text-white">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-40 w-40" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M13.477 14.89A6 6 0 015.11 6.524l8.367 8.368zm1.414-1.414L6.524 5.11a6 6 0 018.367 8.367zM18 10a8 8 0 11-16 0 8 8 0 0116 0z" clip-rule="evenodd" />
+                    </svg>
+                    <h1 class="text-4xl font-bold">Ad Blocker Detected</h1>
+                    <h2>Disable the Ad Blocker to use tSMS - Receive SMS Online</h2>
+                </div>
+            `)
+            document.querySelector('.default-theme').remove()
+        }
+    }, 500);
+    </script>
+    </body>
+</html>

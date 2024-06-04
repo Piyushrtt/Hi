@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="../images/favicon.png" type="image/png">
+            <title>tSMS - Receive SMS Online</title>
+            
+        
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="../css/vendor.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <script src="../vendor/Shortcode/Shortcode.js"></script>
+    <script src="../js/app.js" defer></script>
+    <style >[wire\:loading], [wire\:loading\.delay], [wire\:loading\.inline-block], [wire\:loading\.inline], [wire\:loading\.block], [wire\:loading\.flex], [wire\:loading\.table], [wire\:loading\.grid], [wire\:loading\.inline-flex] {display: none;}[wire\:loading\.delay\.shortest], [wire\:loading\.delay\.shorter], [wire\:loading\.delay\.short], [wire\:loading\.delay\.long], [wire\:loading\.delay\.longer], [wire\:loading\.delay\.longest] {display:none;}[wire\:offline] {display: none;}[wire\:dirty]:not(textarea):not(input):not(select) {display: none;}input:-webkit-autofill, select:-webkit-autofill, textarea:-webkit-autofill {animation-duration: 50000s;animation-name: livewireautofill;}@keyframes livewireautofill { from {} }</style>
+    
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --head-font: "Poppins";
+  --body-font: "Poppins";
+}
+.bg-primary {
+  background-color: #233d4d;
+}
+.text-primary {
+  color: #233d4d;
+}
+.border-primary {
+  border-color: #233d4d;
+}
+.bg-secondary {
+  background-color: #c1dc78;
+}
+.text-secondary {
+  color: #c1dc78;
+}
+.border-secondary {
+  border-color: #c1dc78;
+}
+.bg-tertiary {
+  background-color: #d2ab3e;
+}
+.text-tertiary {
+  color: #d2ab3e;
+}
+.border-tertiary {
+  border-color: #d2ab3e;
+}
+input:checked~.toggle-path {
+  background-color: #233d4d;
+}
+</style></head>
+<body>
+    <div class="default-theme">
+        <div class="container mx-auto px-5 md:px-0">
+            <div class="flex justify-end text-white">
+                                <a class="text-xs md:text-base flex gap-3 px-3 md:px-5 py-2 md:py-3 bg-primary rounded-bl-lg" href="../register.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 md:h-5 w-4 md:w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z" />
+                    </svg>
+                    <span>Register</span>
+                </a>
+                <a class="text-xs md:text-base flex gap-3 px-3 md:px-5 py-2 md:py-3 bg-secondary rounded-br-lg" href="../order.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 md:h-5 w-4 md:w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1" />
+                    </svg>
+                    <span>Login</span>
+                </a>
+                            </div>
+            <div class="flex gap-10">
+                <div class="logo">
+                    <a href="19096864336.html">
+                        <img class="max-w-logo" src="../images/logo.png" alt="logo">
+                    </a>
+                </div>
+                <div class="flex-1">
+                    <nav wire:id="IqBDZF08elOEo0oaI8RT" wire:initial-data="{&quot;fingerprint&quot;:{&quot;id&quot;:&quot;IqBDZF08elOEo0oaI8RT&quot;,&quot;name&quot;:&quot;frontend.nav&quot;,&quot;locale&quot;:&quot;en&quot;,&quot;path&quot;:&quot;\/&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;v&quot;:&quot;acj&quot;},&quot;effects&quot;:{&quot;listeners&quot;:[]},&quot;serverMemo&quot;:{&quot;children&quot;:[],&quot;errors&quot;:[],&quot;htmlHash&quot;:&quot;d5b33687&quot;,&quot;data&quot;:{&quot;menus&quot;:[],&quot;current_route&quot;:null},&quot;dataMeta&quot;:{&quot;modelCollections&quot;:{&quot;menus&quot;:{&quot;class&quot;:&quot;App\\Models\\Menu&quot;,&quot;id&quot;:[1,2],&quot;relations&quot;:[],&quot;connection&quot;:&quot;mysql&quot;,&quot;collectionClass&quot;:null}}},&quot;checksum&quot;:&quot;636815e9a2cc214f94e4fbbe06f34e4d851dafacfb1e08c98663667e27c5c7d0&quot;}}" class="h-full">
+    <div class="hidden lg:flex sticky top-0 z-40 h-24">
+        <div class="w-full">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex items-baseline space-x-4">
+                                                                                                                    <a href="19096864336.html" class="px-3 py-2 text-sm font-semibold text-left bg-transparent text-gray-700  rounded-lg md:w-auto md:inline hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none" target="_self">Home</a>
+                                                                                                                                                                                <a href="../order.html" class="px-3 py-2 text-sm font-semibold text-left bg-transparent text-gray-700  rounded-lg md:w-auto md:inline hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none" target="_self">Order</a>
+                                                                                                                                                        </div>
+                </div>
+                <div class="flex items-center">
+                    <div>
+                                            </div>
+                    <div class="ml-4 items-center md:ml-6">
+                        <div class="relative">
+                            <form action="https://tsms.thehp.in/locale" id="locale-form" method="post">
+                                <input type="hidden" name="_token" value="9ECW1DKJwib7UQvzSksPX5uerXs7fXdHTDE6oynO">                                <select class="block appearance-none bg-white border-gray-300 cursor-pointer text-gray-800 py-1 rounded-md focus:outline-none focus:border-0 focus:shadow-none" name="locale" id="locale">
+                                                                        <option value="ar" >Arabic</option>
+                                                                        <option value="de" >German</option>
+                                                                        <option value="en" selected>English</option>
+                                                                        <option value="es" >Spanish</option>
+                                                                        <option value="fr" >French</option>
+                                                                        <option value="hi" >Hindi</option>
+                                                                        <option value="id" >Indonesian</option>
+                                                                        <option value="it" >Norwegian</option>
+                                                                        <option value="no" >Italian</option>
+                                                                        <option value="pl" >Polish</option>
+                                                                        <option value="ru" >Russian</option>
+                                                                        <option value="tr" >Turkish</option>
+                                                                        <option value="vi" >Vietnamese</option>
+                                                                    </select>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="lg:hidden flex justify-end items-center h-full" x-data="{ open: false }">
+        <div @click="open = true" class="flex items-center w-8 text-black">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+            </svg>
+        </div>
+        <div x-show="open" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-75" x-transition:leave-start="transform opacity-100 scale-100" x-transition:leave-end="transform opacity-0 scale-95" @click.away="open = false" class="flex-col lg:hidden fixed top-0 left-0 min-h-screen w-full bg-black bg-opacity-75">
+            <div @click="open = false" class="absolute top-6 right-6 w-8 text-white">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </div>
+            <div class="w-full mx-auto mt-20">
+                <div class="flex flex-col items-center justify-between">
+                    <div class="flex flex-col items-center space-y-2">
+                                                                                                                    <a href="19096864336.html" class="px-3 py-2 font-semibold text-left bg-transparent text-white  rounded-lg md:w-auto md:inline focus:text-gray-900 focus:bg-gray-200 focus:outline-none" target="_self">Home</a>
+                                                                                                                                                                                <a href="../order.html" class="px-3 py-2 font-semibold text-left bg-transparent text-white  rounded-lg md:w-auto md:inline focus:text-gray-900 focus:bg-gray-200 focus:outline-none" target="_self">Order</a>
+                                                                                                                                                        </div>
+                    <div class="flex flex-col items-center space-y-2 mt-10">
+                        <div class="text-white space-x-2">
+                                                    </div>
+                        <div class="items-center mt-4">
+                            <div class="relative">
+                                <form action="https://tsms.thehp.in/locale" id="locale-form-mobile" method="post">
+                                    <input type="hidden" name="_token" value="9ECW1DKJwib7UQvzSksPX5uerXs7fXdHTDE6oynO">                                    <select class="block appearance-none bg-white border-gray-300 cursor-pointer text-gray-800 py-1 rounded-md focus:outline-none" name="locale" id="locale-mobile">
+                                                                                <option value="ar" >Arabic</option>
+                                                                                <option value="de" >German</option>
+                                                                                <option value="en" selected>English</option>
+                                                                                <option value="es" >Spanish</option>
+                                                                                <option value="fr" >French</option>
+                                                                                <option value="hi" >Hindi</option>
+                                                                                <option value="id" >Indonesian</option>
+                                                                                <option value="it" >Norwegian</option>
+                                                                                <option value="no" >Italian</option>
+                                                                                <option value="pl" >Polish</option>
+                                                                                <option value="ru" >Russian</option>
+                                                                                <option value="tr" >Turkish</option>
+                                                                                <option value="vi" >Vietnamese</option>
+                                                                            </select>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+<!-- Livewire Component wire-end:IqBDZF08elOEo0oaI8RT -->                </div>
+            </div>
+                                    <div class="bg-red-50 w-full flex justify-between items-center rounded-lg p-4">
+                <div class="flex justify-start items-center space-x-5">
+                    <div class="text-red-400">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd" />
+                        </svg>
+                    </div>
+                    <p class="text-sm text-red-800 font-medium">Error! You must be registered user to view this number</p>
+                </div>
+            </div>
+                                <main wire:id="uNljJGOowhwNcx3wQl7S" wire:initial-data="{&quot;fingerprint&quot;:{&quot;id&quot;:&quot;uNljJGOowhwNcx3wQl7S&quot;,&quot;name&quot;:&quot;frontend.home&quot;,&quot;locale&quot;:&quot;en&quot;,&quot;path&quot;:&quot;\/&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;v&quot;:&quot;acj&quot;},&quot;effects&quot;:{&quot;listeners&quot;:[]},&quot;serverMemo&quot;:{&quot;children&quot;:[],&quot;errors&quot;:[],&quot;htmlHash&quot;:&quot;2515aad1&quot;,&quot;data&quot;:{&quot;numbers&quot;:[],&quot;features&quot;:[],&quot;sections&quot;:[],&quot;assigned&quot;:[],&quot;user&quot;:null,&quot;orders&quot;:[],&quot;filters&quot;:{&quot;number&quot;:{&quot;country&quot;:[&quot;CA&quot;,&quot;US&quot;]},&quot;private&quot;:{&quot;country&quot;:[]},&quot;rented&quot;:{&quot;country&quot;:[]}},&quot;private&quot;:[],&quot;rented&quot;:[],&quot;types&quot;:[&quot;Open&quot;,&quot;Register Only&quot;,&quot;Private&quot;,&quot;Shared Buy&quot;,&quot;Private Buy&quot;],&quot;bg&quot;:[&quot;bg-gray-200&quot;,&quot;bg-lime-200&quot;,&quot;bg-red-200&quot;,&quot;bg-purple-200&quot;,&quot;bg-pink-200&quot;],&quot;text&quot;:[&quot;text-gray-800&quot;,&quot;text-lime-800&quot;,&quot;text-red-800&quot;,&quot;text-purple-800&quot;,&quot;text-pink-800&quot;]},&quot;dataMeta&quot;:{&quot;modelCollections&quot;:{&quot;numbers&quot;:{&quot;class&quot;:&quot;App\\Models\\Number&quot;,&quot;id&quot;:[1,2],&quot;relations&quot;:[],&quot;connection&quot;:&quot;mysql&quot;,&quot;collectionClass&quot;:null},&quot;features&quot;:{&quot;class&quot;:&quot;App\\Models\\Feature&quot;,&quot;id&quot;:[1,2,3],&quot;relations&quot;:[],&quot;connection&quot;:&quot;mysql&quot;,&quot;collectionClass&quot;:null},&quot;sections&quot;:{&quot;class&quot;:&quot;App\\Models\\Section&quot;,&quot;id&quot;:[1,2,4],&quot;relations&quot;:[],&quot;connection&quot;:&quot;mysql&quot;,&quot;collectionClass&quot;:null}},&quot;collections&quot;:[&quot;assigned&quot;,&quot;orders&quot;,&quot;private&quot;,&quot;rented&quot;]},&quot;checksum&quot;:&quot;2ae9a60d992b7ced1fc901ca4dbaf5ad2364d5fe2fa6eb615b66b6b45630e430&quot;}}" class="my-10 space-y-20">
+    <div class="space-y-6">
+        <div class="space-y-6">
+            <h1 class="text-2xl font-bold text-primary">Receive SMS Online for FREE</h1>
+            <div class="border-b border-dashed border-primary w-24"></div>
+            <p>
+                <p>We are a service that allows you to use our phone numbers for FREE to receive SMS online and anonymously. Recently, SMS spamming is increasing drastically, so to overcome that, we had created this portal which allows you use our phone numbers and keep your personal phone numbers private so that you don't be a victim of spamming. You are allowed to use as many phone numbers as you want and you can receive as many SMS as you want. Whenever you need a phone number for a website that requires a SMS/phone verification, our service is always available and can be used for such verification purposes.</p><p><br></p>
+            </p>
+        </div>
+                <div id="country-list" class="flex flex-col space-y-3 sm:space-y-0 sm:flex-row sm:items-end sm:space-x-5">
+                        <div class="border-2 border-secondary rounded-lg">
+                <div class="p-5">
+                    <img src="https://flagcdn.com/h120/ca.png" alt="img">
+                    <p class="font-bold text-center pt-5">Canada</p>
+                </div>
+                <a class="w-full block text-center bg-secondary text-white py-2 text-sm rounded-b" href="19096864336.html#/country/ca">
+                    View Numbers
+                </a>
+            </div>
+                        <div class="border-2 border-secondary rounded-lg">
+                <div class="p-5">
+                    <img src="https://flagcdn.com/h120/us.png" alt="img">
+                    <p class="font-bold text-center pt-5">United States</p>
+                </div>
+                <a class="w-full block text-center bg-secondary text-white py-2 text-sm rounded-b" href="19096864336.html#/country/us">
+                    View Numbers
+                </a>
+            </div>
+                    </div>
+                <div id="number-filters" class="flex flex-col space-y-3 sm:space-y-0 sm:flex-row sm:items-end sm:space-x-5 hidden">
+                        <button data-action="show_country_list" type="button" class="bg-primary text-white rounded px-3 py-2 text-sm"><i class="fas fa-arrow-left"></i><span class="ml-2">Back to Country List</span></button>
+                        <div class="flex flex-col hidden">
+                <label class="text-xs uppercase">Country</label>
+                <select data-filter="number" name="country" class="text-sm mt-1 py-2 block border border-gray-200 rounded-lg">
+                    <option value="null" disabled selected>Select Country</option>
+                                        <option value="CA">Canada</option>
+                                        <option value="US">United States</option>
+                                    </select>
+            </div>
+            <div class="flex flex-col">
+                <label class="text-xs uppercase">Type</label>
+                <div class="flex space-x-3">
+                    <div class="flex items-center mt-1 py-2">
+                        <input data-filter="number" value="0" id="type_0" name="type" type="radio" class="focus:ring-gray-600 text-gray-600 h-4 w-4 border-gray-300">
+                        <label for="type_0" class="ml-2 block text-sm font-medium text-gray-700">Open</label>
+                    </div>
+                    <div class="flex items-center mt-1 py-2">
+                        <input data-filter="number" value="1" id="type_1" name="type" type="radio" class="focus:ring-gray-600 text-gray-600 h-4 w-4 border-gray-300">
+                        <label for="type_1" class="ml-2 block text-sm font-medium text-gray-700">Register Only</label>
+                    </div>
+                </div>
+            </div>
+            <div class="flex flex-col">
+                <label class="text-xs uppercase">Sort By</label>
+                <select data-filter="number-sort" name="sort_by" class="text-sm mt-1 py-2 block border border-gray-200 rounded-lg">
+                    <option value="oldest" selected>Oldest</option>
+                    <option value="latest">Latest</option>
+                </select>
+            </div>
+            <div class="flex gap-2">
+                <button data-filter="number" type="button" class="bg-primary text-white rounded px-3 py-2 text-sm filter">Filter</button>
+                <button data-filter="number" type="button" class="bg-secondary text-white rounded px-3 py-2 text-sm clear">Clear</button>
+            </div>
+        </div>
+                <section id="number" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-5 hidden">
+                        <div data-country="CA" data-type="0" class="border-2 flex flex-col justify-between border-secondary rounded-lg">
+                <div class="flex justify-between p-5">
+                    <div class="space-y-1">
+                        <h4 class="font-semibold">+19029055325</h4>
+                        <h5 class="text-sm text-gray-400"></h5>
+                    </div>
+                    <div>
+                        <img src="https://flagcdn.com/h40/ca.png" alt="img">
+                    </div>
+                </div>
+                                <a class="w-full block text-center bg-secondary text-white py-2 text-sm rounded-b" href="19029055325.html">
+                    View Messages
+                </a>
+                            </div>
+                        <div data-country="US" data-type="1" class="border-2 flex flex-col justify-between border-gray-400 rounded-lg">
+                <div class="flex justify-between p-5">
+                    <div class="space-y-1">
+                        <h4 class="font-semibold">+19096864336</h4>
+                        <h5 class="text-sm text-gray-400"></h5>
+                    </div>
+                    <div>
+                        <img src="https://flagcdn.com/h40/us.png" alt="img">
+                    </div>
+                </div>
+                                <a class="w-full block text-center bg-gray-400 text-white py-2 text-sm cursor-not-allowed rounded-b" href="19096864336.html">
+                    Register to View Messages
+                </a>
+                            </div>
+                    </section>
+            </div>
+            <div class="space-y-6" id="features">
+        <h1 class="text-2xl font-bold text-primary">Features</h1>
+        <div class="border-b border-dashed border-primary w-24"></div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-5">
+                        <div class="space-y-3">
+                <div class="icon">
+                    <i class="text-5xl text-secondary fas fa-user-secret"></i>
+                </div>
+                <h3 class="text-lg text-primary font-bold">Privacy</h3>
+                <p class="pt-2">
+                    Your privacy is very important! With our temporary phone numbers you don't have to provide your real phone number on other websites.
+                </p>
+            </div>
+                        <div class="space-y-3">
+                <div class="icon">
+                    <i class="text-5xl text-secondary fas fa-dollar-sign"></i>
+                </div>
+                <h3 class="text-lg text-primary font-bold">Free SMS</h3>
+                <p class="pt-2">
+                    Our SMS receiver <strong>service is free</strong> for everyone and will always be free. We won't charge you for any SMS you receive or phone number you use.
+                </p>
+            </div>
+                        <div class="space-y-3">
+                <div class="icon">
+                    <i class="text-5xl text-secondary fas fa-shipping-fast"></i>
+                </div>
+                <h3 class="text-lg text-primary font-bold">Fast Receiver</h3>
+                <p class="pt-2">
+                    The most text messages that were send to our sms numbers <strong>arrive after some seconds.</strong> This means you don't have to wait minutes or hours like on other sms platforms.
+                </p>
+            </div>
+                    </div>
+    </div>
+    <div class="space-y-6">
+        <h1 class="text-2xl font-bold text-primary">Frequently asked Questions</h1>
+        <div class="border-b border-dashed border-primary w-24"></div>
+        <p>
+            <p><strong>I've waited more than 15 min but no message arrived!</strong><br />Maybe the website where you entered our disposable phone number blocked the number you used for verification. Or sometimes there is delay with OTP if it has been used often. If you have problems receiving your verification code then try another number in our list.</p>
+                <p><strong>How to use our service</strong><br />Select a phone number listed on the top of our website. Enter your chosen phone number in the app or website from where you want to get a SMS. Now wait until we receive your SMS.</p>
+                <p><strong>How often do you add new phone numbers?</strong><br />We try to add new phone numbers weekly. But there is no regular period when we add new numbers.</p>
+                <p><strong>How many temporary numbers do you have?</strong><br />The total amount of temporary phone numbers varies. Sometimes we have to delete old numbers and sometimes we add new to our database.</p>
+                <p><strong>Do I need a phone number to use this website?</strong><br />No. The only thing you need is a web browser like Google Chrome, Mozilla Firefox, Opera or Microsoft Edge.</p>
+                <p><strong>Is it neccessary to download a mobile app or a software to use your service?</strong><br />No you do not need any software or app. This is a web-based service that is accessible from everywhere.</p>
+                <p><strong>Do you filter any received text messages?</strong><br />All messages that we receive were displayed without any filtering.</p>
+        </p>
+    </div>
+        <div class="space-y-6 custom">
+        <h1 class="text-2xl font-bold text-primary">Blog</h1>
+        <div class="border-b border-dashed border-primary w-24"></div>
+        <p>
+            <p>[blogs url="https://harshitpeer.com/blog" per_page="4"]</p>
+        </p>
+    </div>
+    </main>
+<!-- Livewire Component wire-end:uNljJGOowhwNcx3wQl7S -->            </div>
+    </div>
+    <script src="../livewire/livewire.js%3Fid=90730a3b0e7144480175" data-turbo-eval="false" data-turbolinks-eval="false" ></script><script data-turbo-eval="false" data-turbolinks-eval="false" >window.livewire = new Livewire();window.Livewire = window.livewire;window.livewire_app_url = '';window.livewire_token = '9ECW1DKJwib7UQvzSksPX5uerXs7fXdHTDE6oynO';window.deferLoadingAlpine = function (callback) {window.addEventListener('livewire:load', function () {callback();});};let started = false;window.addEventListener('alpine:initializing', function () {if (! started) {window.livewire.start();started = true;}});document.addEventListener("DOMContentLoaded", function () {if (! started) {window.livewire.start();started = true;}});</script>
+    
+    
+            
+                <script src="../storage/js/pustrck.js" defer></script>
+    <script defer>
+    setTimeout(() => {
+        const enable_ad_block_detector = "0"
+        if(!document.getElementById('Q8CvrZzY9fphm6gG') && enable_ad_block_detector == "1") {
+            document.querySelector('body > div').insertAdjacentHTML('beforebegin', `
+                <div class="fixed w-screen h-screen bg-red-800 flex flex-col justify-center items-center gap-5 z-50 text-white">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-40 w-40" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M13.477 14.89A6 6 0 015.11 6.524l8.367 8.368zm1.414-1.414L6.524 5.11a6 6 0 018.367 8.367zM18 10a8 8 0 11-16 0 8 8 0 0116 0z" clip-rule="evenodd" />
+                    </svg>
+                    <h1 class="text-4xl font-bold">Ad Blocker Detected</h1>
+                    <h2>Disable the Ad Blocker to use tSMS - Receive SMS Online</h2>
+                </div>
+            `)
+            document.querySelector('.default-theme').remove()
+        }
+    }, 500);
+    </script>
+    </body>
+</html>
